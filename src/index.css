@@ -5,9 +5,7 @@
 
 /* custom.css */
 @layer utilities {
-  .logos-transition {
-    transition: all 2.4s cubic-bezier(0.25, 1, 0.5, 1);
-  }
+
   .logo.hide {
     opacity: 0;
   }
@@ -20,6 +18,7 @@
     transform: scale(0.4) translateY(150px);
   }
   .logo {
+    transition: all 2.4s cubic-bezier(0.25, 1, 0.5, 1);
     filter: invert(97%) grayscale(100%) opacity(0.6);
   }
  
