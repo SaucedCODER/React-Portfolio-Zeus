@@ -60,4 +60,4 @@ const Project = () => {
   );
 };
 
-export default Work;
+export default Project;
