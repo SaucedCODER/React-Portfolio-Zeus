@@ -3,6 +3,35 @@
 @tailwind components;
 @tailwind utilities;
 
+/* custom.css */
+@layer utilities {
+  .logos-transition {
+    transition: all 2.4s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+  .logo.hide {
+    opacity: 0;
+  }
+
+  .logo.to-top {
+    transform: scale(0.4) translateY(-150px);
+  }
+
+  .logo.to-bottom {
+    transform: scale(0.4) translateY(150px);
+  }
+  .logo {
+    filter: invert(97%) grayscale(100%) opacity(0.6);
+  }
+ 
+
+  /* body.dark .logo {
+    filter: invert(97%) grayscale(100%) opacity(0.6);
+  }
+
+  body.light .logo {
+    filter: grayscale(100%) opacity(0.6);
+  } */
+}
 
 
 @layer base {

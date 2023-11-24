@@ -1,19 +1,21 @@
 import React from "react";
-import { data } from "../collections/tech.jsx";
+import { data } from "../collections/projects.jsx";
 
 const Project = () => {
-  // projects file
+  //project data with info
   const project = data;
-  //setProject(data);
 
   return (
-    <div name="work" className="w-full md:h-screen text-gray-300 bg-[#0f0f0f]">
+    <div
+      name="projects"
+      className="w-full min-h-screen text-gray-300 bg-[#0f0f0f]"
+    >
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="pb-8">
           <p className="text-4xl font-bold inline border-b-4 text-gray-300 border-green-600">
             Projects
           </p>
-          <p className="py-6">// Check out some of my recent project</p>
+          <p className="py-4">// Check out some of my recent project</p>
         </div>
 
         {/* container for projects */}
@@ -22,7 +24,7 @@ const Project = () => {
           {project.map((item, index) => (
             <div
               key={index}
-              style={{ backgroundImage: `url(${item.image})` }}
+              style={{ backgroundImage: `url(${item.path})` }}
               className="shadow-lg shadow-[#040c16] group container rounded-md 
               flex justify-center text-center items-center mx-auto content-div "
             >
