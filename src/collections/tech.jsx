@@ -1,32 +1,47 @@
-import WorkIm from "../assets/projects/workImg.jpeg";
-import RealEst from "../assets/projects/realestate.jpg";
+import LMS from "../assets/projects/LMS.png";
+import TES from "../assets/projects/TES.png";
+import EMS from "../assets/projects/EMS.png";
 
 export const data = [
   {
     id: 1,
-    name: "React JS Application",
-    image: WorkIm,
+    name: "Library Management System(PHP)",
+    image: LMS,
     github: "",
     live: "",
   },
   {
     id: 2,
-    name: "React JS Application",
-    image: RealEst,
+    name: "Teacher Evaluation System(PHP)",
+    image: TES,
     github: "",
     live: "",
   },
   {
-    id: 3,
-    name: "React JS Application",
-    image: WorkIm,
+    id: 2,
+    name: "Employee Management System(Python/Django)",
+    image: EMS,
     github: "",
     live: "",
   },
   {
-    id: 4,
-    name: "React JS Application",
-    image: RealEst,
+    id: 1,
+    name: "Library Management System(PHP)",
+    image: LMS,
+    github: "",
+    live: "",
+  },
+  {
+    id: 2,
+    name: "Employee Management System(Python/Django)",
+    image: EMS,
+    github: "",
+    live: "",
+  },
+  {
+    id: 2,
+    name: "Teacher Evaluation System(PHP)",
+    image: TES,
     github: "",
     live: "",
   },

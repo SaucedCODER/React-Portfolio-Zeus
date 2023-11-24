@@ -17,7 +17,7 @@ const Navbar = () => {
   const handleClick = () => setNav(!nav);
 
   return (
-    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300">
+    <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0f0f0f] text-gray-300">
       <div>
         <img src={Logo} alt="Logo Image" style={{ width: "200px" }} />
       </div>
@@ -94,9 +94,16 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
+    </div>
+  );
+};
 
-      {/* Social icons */}
-      <div className="hidden lg:flex fixed flex-col top-[35%] left-0">
+export default Navbar;
+{
+  /* Social icons */
+}
+{
+  /* <div className="hidden lg:flex fixed flex-col top-[35%] left-0">
         <ul>
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600">
             <a
@@ -132,8 +139,5 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-    </div>
-  );
-};
-
-export default Navbar;
+   */
+}
