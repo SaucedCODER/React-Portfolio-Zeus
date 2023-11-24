@@ -1,6 +1,8 @@
 // logosData.js
 import React from "react";
 import {
+  FaGit,
+  FaHtml5,
   FaBootstrap,
   FaCss3Alt,
   FaDatabase,
@@ -9,7 +11,8 @@ import {
   FaJs,
   FaReact,
 } from "react-icons/fa";
-import { SiTailwindcss } from "react-icons/si";
+import { FaGitAlt } from "react-icons/fa6";
+import { SiTailwindcss, SiDjango } from "react-icons/si";
 
 export const data = [
   [
@@ -23,8 +26,13 @@ export const data = [
     ["MongoDB", <FaDatabase size={35} />, "hide to-bottom"],
   ],
   [
-    ["ExpressJS", <FaNode size={35} />, "hide to-top text-blue-700"],
+    ["ExpressJS", <FaNode size={35} />, "hide to-top"],
     ["Javascript", <FaJs size={35} />, ""],
     ["ReactJs", <FaReact size={35} />, "hide to-bottom"],
+  ],
+  [
+    ["Git", <FaGitAlt size={35} />, "hide to-top"],
+    ["HTML", <FaHtml5 size={35} />, ""],
+    ["Django", <SiDjango size={35} />, "hide to-bottom"],
   ],
 ];

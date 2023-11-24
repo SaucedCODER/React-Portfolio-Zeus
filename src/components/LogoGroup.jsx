@@ -4,7 +4,7 @@ const LogoGroup = ({ logos }) => (
   <div className="logo-group flex flex-col items-center justify-center relative">
     {logos.map((item, index) => (
       <div
-        key={item[0] + index}
+        key={item[0] + "-" + index}
         className={`logo ${item[2]} absolute top-0 max-h-14 max-w-[150px]`}
       >
         <div className="flex items-center">

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { data } from "../collections/tech.jsx";
-import LogoGroup from "./Logogroup";
+import LogoGroup from "./Logogroup.jsx";
 
-const LogoRotatingAnimation = () => {
+const LogoRotating = () => {
   const [logos, setLogos] = useState(data);
 
   useEffect(() => {
@@ -33,7 +33,7 @@ const LogoRotatingAnimation = () => {
   }, [logos]);
 
   return (
-    <div className="logos min-h-[50vh] flex justify-around items-start md:py-10 lg:py-[var(--spacing-x-large)] bg-[#0f0f0f] text-4xl">
+    <div className="logos min-h-[50vh] flex flex-wrap justify-around items-center bg-[#0f0f0f] text-3xl">
       {logos.map((logos, index) => (
         <LogoGroup key={index} logos={logos} />
       ))}
@@ -41,4 +41,4 @@ const LogoRotatingAnimation = () => {
   );
 };
 
-export default LogoRotatingAnimation;
+export default LogoRotating;

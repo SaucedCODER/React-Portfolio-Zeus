@@ -1,17 +1,15 @@
 import React from "react";
 
 import { data } from "../collections/skills.jsx";
+import LogoRotating from "./LogoRotating.jsx";
 
 const Skills = () => {
   const project = data;
   return (
-    <div
-      name="skills"
-      className="w-full min-h-screen bg-[#0f0f0f] text-gray-300"
-    >
+    <div name="skills" className="w-full min-h-screen bg-[#0f0f0f] ">
       {/* Container */}
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
-        <div>
+        <div className=" text-gray-300">
           <p className="text-4xl font-bold inline border-b-4 border-green-600 ">
             Skills
           </p>
@@ -26,11 +24,14 @@ const Skills = () => {
               className="hover:scale-110 duration-500"
             >
               <img className="w-20 mx-auto" src={item.path} alt="HTML icon" />
-              <p className="my-4">{item.name.toLocaleUpperCase()}</p>
+              <p className="my-4 text-gray-300">
+                {item.name.toLocaleUpperCase()}
+              </p>
             </div>
           ))}
         </div>
       </div>
+      <LogoRotating />
     </div>
   );
 };
