@@ -31,7 +31,6 @@ const Skills = () => {
           ))}
         </div>
       </div>
-      <LogoRotating />
     </div>
   );
 };

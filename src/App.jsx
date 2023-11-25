@@ -1,5 +1,6 @@
+import About from "./components/About";
 import Home from "./components/Home";
-import LogoRotatingAnimation from "./components/LogoRotating";
+import LogoRotating from "./components/LogoRotating";
 import Navbar from "./components/Navbar";
 import Project from "./components/Project";
 import Skills from "./components/Skills";
@@ -9,6 +10,8 @@ function App() {
     <>
       <Navbar />
       <Home />
+      <About />
+      <LogoRotating />
       <Skills />
       <Project />
     </>
