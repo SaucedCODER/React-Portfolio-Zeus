@@ -33,9 +33,9 @@ const LogoRotating = () => {
   }, [logos]);
 
   return (
-    <div className="bg-[#0f0f0f] ">
-      <h1 className="text-center text-5xl text-slate-200 font-bold">
-        Link Profiles
+    <div className="bg-[#0f0f0f] py-[5rem]">
+      <h1 className="text-center  text-5xl text-slate-200 font-bold">
+        What I Like
       </h1>
       <div className="logos min-h-[40vh] flex flex-wrap justify-around items-center text-3xl">
         {logos.map((logos, index) => (

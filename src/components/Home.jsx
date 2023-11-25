@@ -1,5 +1,6 @@
 import React from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
+import { TbDownload } from "react-icons/tb";
 import { Link } from "react-scroll";
 {
   /* <img
@@ -27,10 +28,16 @@ const Home = () => {
           websites and putting together some CRUD apps from scratch — just
           keeping it real.
         </p>
-        <div>
+        <div className="flex">
           <Link to="projects" smooth={true} duration={800}>
-            <button className="text-white group border-2 px-6 py-3 my-2 flex items-center hover:bg-green-600 hover:border-green-600">
-              View Projects
+            <button className="text-white group border-1 px-6 py-3 my-2 flex items-center bg-green-600 hover:btn-hover mr-3 border-[1px] border-green-600">
+              Resume
+              <TbDownload className="ml-3" />
+            </button>
+          </Link>
+          <Link to="projects" smooth={true} duration={800}>
+            <button className="text-white group border-[1px] border-gray-500 px-6 py-3 my-2 flex items-center  hover:border-green-600">
+              See my Project
               <span className="group-hover:rotate-90 duration-300">
                 <HiArrowNarrowRight className="ml-3" />
               </span>

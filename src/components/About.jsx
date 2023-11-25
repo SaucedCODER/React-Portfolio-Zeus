@@ -1,5 +1,6 @@
 import React from "react";
-
+import { FaGithub, FaLinkedin, FaFacebook, FaLinkedinIn } from "react-icons/fa";
+import Accordion from "./Accordion";
 const About = () => {
   return (
     <div name="about" className="w-full h-screen bg-[#0f0f0f] text-gray-300">
@@ -21,12 +22,64 @@ const About = () => {
           </div>
           <div>
             <p>
-              I am passionate about building excellent software that improves
-              the lives of those around me. I specialize in creating software
-              for clients ranging from individuals and small-businesses all the
-              way to large enterprise corporations. What would you do if you had
-              a software expert available at your fingertips?
+              My journey involves crafting digital solutions, ranging from
+              personal projects to collaborative efforts, with the aim of making
+              a positive impact. I thrive on challenges, love turning ideas into
+              reality, and I'm eager to contribute my skills to diverse and
+              exciting projects. Let's embark on this journey together!
+              <span class="text-blue-400 cursor-pointer"> Read more...</span>
             </p>
+          </div>
+          <div>
+            <h2 className="sm:text-left text-2xl text-gray-400 my-3 mt-5 font-bold">
+              What Sets Me Apart
+            </h2>
+            <div>
+              <Accordion
+                title="Eager Learner"
+                content="Passion fuels my journey. I'm diving headfirst into the world of CRUD applications and website cloning, eagerly absorbing every bit of knowledge to enhance my skills."
+              />
+              <Accordion
+                title="Collaboration Fueled"
+                content="I thrive in collaborative environments. Learning from experienced developers and contributing to team projects are experiences I'm eager to embrace."
+              />
+              <Accordion
+                title="Adaptability"
+                content="As a recent graduate, I bring adaptability and a fresh perspective. Every project is an opportunity to learn, innovate, and make a positive impact."
+              />
+            </div>
+          </div>
+          <div>
+            <h2 class="sm:text-left text-2xl text-gray-400 my-3 mt-5 font-bold">
+              My Vision
+            </h2>
+            <p>
+              Imagine having a dedicated and motivated developer ready to take
+              on challenges, transform ideas into reality, and contribute to
+              innovative projects. My commitment is to continuous improvement,
+              ensuring I evolve alongside the dynamic field of web development.
+            </p>
+            <h2 class="sm:text-left text-2xl text-blue-500 mb-4 mt-7 font-bold">
+              Follow Me On
+            </h2>
+            <div className="flex items-center mb-4">
+              <div className="mr-2">
+                <FaLinkedin size={30} />
+              </div>
+              <span className="font-bold">Linkedin</span>
+            </div>
+            <div className="flex items-center mb-4">
+              <div className="mr-2">
+                <FaGithub size={30} />
+              </div>
+              <span className="font-bold">Github</span>
+            </div>
+            <div className="flex items-center mb-4">
+              <div className="mr-2">
+                <FaFacebook size={30} />
+              </div>
+              <span className="font-bold">Facebook</span>
+            </div>
           </div>
         </div>
       </div>

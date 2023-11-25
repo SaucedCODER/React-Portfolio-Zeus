@@ -23,6 +23,9 @@
   }
  
 
+  .btn-hover{
+    box-shadow: #ffffff40 0 0 0 .3rem;
+  }
   /* body.dark .logo {
     filter: invert(97%) grayscale(100%) opacity(0.6);
   }
