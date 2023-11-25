@@ -24,13 +24,7 @@ export const data = [
     github: "",
     live: "",
   },
-  {
-    id: 4,
-    name: "Library Management System(PHP)",
-    path: LMS,
-    github: "",
-    live: "",
-  },
+
   {
     id: 5,
     name: "Employee Management System(Python/Django)",
@@ -42,6 +36,13 @@ export const data = [
     id: 6,
     name: "Teacher Evaluation System(PHP)",
     path: TES,
+    github: "",
+    live: "",
+  },
+  {
+    id: 4,
+    name: "Library Management System(PHP)",
+    path: LMS,
     github: "",
     live: "",
   },

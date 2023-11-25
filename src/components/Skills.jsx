@@ -6,7 +6,7 @@ import LogoRotating from "./LogoRotating.jsx";
 const Skills = () => {
   const project = data;
   return (
-    <div name="skills" className="w-full min-h-screen bg-[#0f0f0f] ">
+    <div name="skills" className="w-full min-h-screen bg-[#0f0f0f] pt-[5rem]">
       {/* Container */}
       <div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className=" text-gray-300">
@@ -23,7 +23,11 @@ const Skills = () => {
               key={item.name + index}
               className="hover:scale-110 duration-500"
             >
-              <img className="w-20 mx-auto" src={item.path} alt="HTML icon" />
+              <img
+                className="w-[5rem] mx-auto"
+                src={item.path}
+                alt="HTML icon"
+              />
               <p className="my-4 text-gray-300">
                 {item.name.toLocaleUpperCase()}
               </p>

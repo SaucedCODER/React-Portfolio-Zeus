@@ -3,7 +3,10 @@ import { FaGithub, FaLinkedin, FaFacebook, FaLinkedinIn } from "react-icons/fa";
 import Accordion from "./Accordion";
 const About = () => {
   return (
-    <div name="about" className="w-full h-screen bg-[#0f0f0f] text-gray-300">
+    <div
+      name="about"
+      className="w-full min-h-screen bg-[#0f0f0f] text-gray-300 pt-[5rem]"
+    >
       <div className="flex flex-col justify-center items-center w-full h-full">
         <div className="max-w-[1000px] w-full grid grid-cols-2 gap-8">
           <div className="sm:text-right pb-8 pl-4">
@@ -27,7 +30,6 @@ const About = () => {
               a positive impact. I thrive on challenges, love turning ideas into
               reality, and I'm eager to contribute my skills to diverse and
               exciting projects. Let's embark on this journey together!
-              <span class="text-blue-400 cursor-pointer"> Read more...</span>
             </p>
           </div>
           <div>
@@ -41,16 +43,17 @@ const About = () => {
               />
               <Accordion
                 title="Collaboration Fueled"
-                content="I thrive in collaborative environments. Learning from experienced developers and contributing to team projects are experiences I'm eager to embrace."
+                content="During college, I collaborated on a dynamic system with enthusiastic peers. Our teamwork resulted in innovative solutions, sparking my passion for collaborative projects. Excited to bring this energy to new endeavors!"
               />
               <Accordion
                 title="Adaptability"
                 content="As a recent graduate, I bring adaptability and a fresh perspective. Every project is an opportunity to learn, innovate, and make a positive impact."
+                open="true"
               />
             </div>
           </div>
           <div>
-            <h2 class="sm:text-left text-2xl text-gray-400 my-3 mt-5 font-bold">
+            <h2 className="sm:text-left text-2xl text-gray-400 my-3 mt-5 font-bold">
               My Vision
             </h2>
             <p>
@@ -59,7 +62,7 @@ const About = () => {
               innovative projects. My commitment is to continuous improvement,
               ensuring I evolve alongside the dynamic field of web development.
             </p>
-            <h2 class="sm:text-left text-2xl text-blue-500 mb-4 mt-7 font-bold">
+            <h2 className="sm:text-left text-2xl text-blue-500 mb-4 mt-7 font-bold">
               Follow Me On
             </h2>
             <div className="flex items-center mb-4">

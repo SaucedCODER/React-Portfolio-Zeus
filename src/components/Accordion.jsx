@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-const Accordion = ({ title, content }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const Accordion = ({ title, content, open = false }) => {
+  const [isOpen, setIsOpen] = useState(open);
 
   return (
     <div className="mb-4">

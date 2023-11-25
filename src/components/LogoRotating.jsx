@@ -33,7 +33,7 @@ const LogoRotating = () => {
   }, [logos]);
 
   return (
-    <div className="bg-[#0f0f0f] py-[5rem]">
+    <div className="bg-[#0f0f0f] pt-[7rem]">
       <h1 className="text-center  text-5xl text-slate-200 font-bold">
         What I Like
       </h1>
