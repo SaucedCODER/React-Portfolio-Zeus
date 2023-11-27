@@ -3,7 +3,7 @@ import CSS from "../assets/skills/css-3.png";
 import JavaScript from "../assets/skills/js.png";
 import ReactImg from "../assets/skills/react.png";
 import Node from "../assets/skills/nodejs.png";
-import GitHub from "../assets/skills/github.png";
+import GitHub from "../assets/skills/github.svg";
 import Tailwind from "../assets/skills/tailwindcss.png";
 import Mongo from "../assets/skills/mongodb.png";
 import mysql from "../assets/skills/mysql.png";

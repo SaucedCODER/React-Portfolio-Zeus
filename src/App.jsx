@@ -1,4 +1,5 @@
 import About from "./components/About";
+import Contact from "./components/Contact";
 import Home from "./components/Home";
 import LogoRotating from "./components/LogoRotating";
 import Navbar from "./components/Navbar";
@@ -14,6 +15,7 @@ function App() {
       <LogoRotating />
       <Skills />
       <Project />
+      <Contact />
     </>
   );
 }
