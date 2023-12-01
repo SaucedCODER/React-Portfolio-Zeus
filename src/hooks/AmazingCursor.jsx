@@ -294,7 +294,8 @@ function CursorCore({
    * AnimatedCursor
    * Calls and passes props to CursorCore if not a touch/mobile device.
    */
-  function AnimatedCursor({
+  function AmazingCursor
+  ({
     outerStyle,
     innerStyle,
     color,
@@ -307,7 +308,7 @@ function CursorCore({
     clickables
   }) {
     if (typeof navigator !== 'undefined' && IsDevice.any()) {
-      return <React.Fragment></React.Fragment>
+      return <></>
     }
     return (
       <CursorCore
@@ -326,4 +327,4 @@ function CursorCore({
   }
   
  
-export default AnimatedCursor
+export default AmazingCursor

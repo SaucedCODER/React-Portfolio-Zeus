@@ -56,7 +56,22 @@
 .content-div:hover {
     background-image: linear-gradient(
         to right,
-        rgba(20, 161, 29, 0.8),
-        hsla(121, 93%, 58%, 0.8)  
+        rgba(58, 58, 58, 0.451),
+        hsla(0, 0%, 10%, 0.358)  
     )!important;
+    outline: 2px solid rgba(255, 255, 255, 0.304);
+}
+
+.cursor_dot div {
+  z-index: 999999 !important;
+}
+
+.cursor_dot div:last-child {
+  background-color: rgb(255, 255, 255) !important;
+  outline: 3px solid rgb(96, 96, 96);
+}
+
+.cursor_dot div:first-child {
+  filter: invert(1);
+  background-color: rgba(89, 89, 89, 0.407) !important;
 }

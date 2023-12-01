@@ -40,7 +40,7 @@ const Home = () => {
         </p>
         <div className="flex">
           <Link to="projects" smooth={true} duration={800}>
-            <button className="text-white group border-1 px-6 py-3 my-2 flex items-center bg-green-600 hover:btn-hover mr-3 border-[1px] border-green-600">
+            <button className="text-white group border-1 px-6 py-3 my-2 flex items-center bg-green-600 hover:btn-hover mr-4 border-[1px] border-green-600">
               Resume
               <TbDownload className="ml-3" />
             </button>
