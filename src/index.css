@@ -42,7 +42,6 @@
     }
     li {
         @apply px-4;
-        @apply cursor-pointer
     }
 }
 
@@ -59,11 +58,12 @@
         rgba(58, 58, 58, 0.451),
         hsla(0, 0%, 10%, 0.358)  
     )!important;
-    outline: 2px solid rgba(255, 255, 255, 0.304);
+    outline: 1px solid rgba(255, 255, 255, 0.304);
 }
 
 .cursor_dot div {
   z-index: 999999 !important;
+  cursor: none;
 }
 
 .cursor_dot div:last-child {
