@@ -1,6 +1,7 @@
 import React from "react";
 import { data } from "../collections/projects.jsx";
-
+import { FaCode } from "react-icons/fa6";
+import { SlGlobe } from "react-icons/sl";
 const Project = () => {
   //project data with info
   const project = data;
@@ -29,26 +30,24 @@ const Project = () => {
               flex justify-center text-center items-center mx-auto content-div"
             >
               {/* Hover effect for images */}
-              <div className="opacity-0 group-hover:opacity-100">
+              <div className="opacity-0 group-hover:opacity-100 flex flex-col align-center">
                 <span className="text-2xl font bold text-white tracking-wider ">
                   {item.name}
                 </span>
-                <div className="pt-8 text-center ">
+                <div className="pt-8 text-center flex justify-center mt-auto">
                   {/* eslint-disable-next-line */}
-                  <a href={item.github} target="_blank"className="text-center rounded-lg px-4 py-3 m-2
-                        text-green-400 font-bold text-lg">
-                    <button
-                
-                    >
+                  <a href={item.github} target="_blank"className="flex items-center text-center rounded-lg 
+                        text-green-400 font-bold text-lg mr-5">
+                    <div className="mr-2"><FaCode /></div>
+                    <button>
                       Code
                     </button>
                   </a>
                   {/* eslint-disable-next-line */}
-                  <a href={item.live} target="_blank"  className="text-center rounded-lg px-4 py-3 m-2
+                  <a href={item.live} target="_blank"  className="flex items-center text-center rounded-lg 
                         text-blue-400 font-bold text-lg">
-                    <button
-                     
-                    >
+                    <div className="mr-2"><SlGlobe /></div>
+                    <button className="font-bold">
                       Live
                     </button>
                   </a>
