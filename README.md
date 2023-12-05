@@ -1,4 +1,4 @@
-# My Portfolio (React + Vite / TailwindCSS) 
+# My Portfolio (React + Vite / TailwindCSS) - minimalist design
 
 This is a simple React + Vite portfolio template with a minimalist design.
 
