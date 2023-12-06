@@ -98,7 +98,7 @@ const Contact = () => {
                   name="name"
                   id="name"
                   placeholder="Full Name"
-                  className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
+                  className="link w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-300 font-semibold focus:border-green-500 focus:outline-none"
                 />
               </div>
 
@@ -111,26 +111,25 @@ const Contact = () => {
                   name="email"
                   id="email"
                   placeholder="Email"
-                  className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
+                  className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-300 font-semibold focus:border-green-500 focus:outline-none"
                 />
               </div>
 
               <div className="flex flex-col mt-2">
-                <label htmlFor="tel" className="hidden">
-                  Number
+                <label htmlFor="message" className="hidden">
+                  Message
                 </label>
-                <input
-                  type="tel"
-                  name="tel"
-                  id="tel"
-                  placeholder="Telephone Number"
-                  className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-800 font-semibold focus:border-indigo-500 focus:outline-none"
-                />
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Your Message"
+                  className="w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-300 font-semibold focus:border-green-500 focus:outline-none"
+                ></textarea>
               </div>
 
               <button
                 type="submit"
-                className="md:w-32 bg-indigo-600 hover:bg-blue-dark text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-indigo-500 transition ease-in-out duration-300"
+                className="md:w-32 bg-green-600 hover:bg-blue-dark text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-greeb-500 transition ease-in-out duration-300"
               >
                 Submit
               </button>
