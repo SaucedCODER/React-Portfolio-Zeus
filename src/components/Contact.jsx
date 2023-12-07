@@ -1,10 +1,51 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import Toast from "./Toast";
 const Contact = () => {
+  // Some Functionalities
+  const [showToast, setShowToast] = useState(false);
+  const [isSending, setIsSending] = useState(false);
+  const [toastMessage, setToastMessage] = useState("");
+  const [toastType, setToastType] = useState("");
+
+  // Function to show the toast
+  const showToastMessage = (message, type) => {
+    setToastMessage(message);
+    setToastType(type);
+    setShowToast(true);
+
+    // Hide the toast after a few seconds
+    setTimeout(() => {
+      setShowToast(false);
+    }, 5000);
+  };
+  const handleSendMessage = (e) => {
+    e.preventDefault();
+    setIsSending(true);
+    setTimeout(() => {
+      setIsSending(false);
+      sendEmail();
+    }, 2000);
+  };
+  // sending email through EMailJS
   const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  const sendEmail = () => {
+    // Access form values
+    const username = form.current.user_name.value;
+    const email = form.current.email.value;
+    const message = form.current.message.value;
+
+    // Validate input
+    if (!username || !email || !message) {
+      console.log("Please fill in all fields before sending the email.");
+      showToastMessage(
+        "Please fill in all fields before sending the email.",
+        "failed"
+      );
+
+      return;
+    }
 
     emailjs
       .sendForm(
@@ -16,10 +57,15 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
-          console.log("sended");
+          showToastMessage("Your Message successfully sent!", "sucess");
+          document.getElementById("contactForm").reset();
         },
         (error) => {
           console.log(error.text);
+          showToastMessage(
+            "There's an system error please try again later!",
+            "failed"
+          );
         }
       );
   };
@@ -123,7 +169,8 @@ const Contact = () => {
               <form
                 className="p-6 flex flex-col justify-center"
                 ref={form}
-                onSubmit={sendEmail}
+                id="contactForm"
+                onSubmit={handleSendMessage}
               >
                 <div className="flex flex-col">
                   <label htmlFor="name" className="hidden">
@@ -166,10 +213,18 @@ const Contact = () => {
                 <button
                   type="submit"
                   className="md:w-32 bg-green-600 hover:bg-blue-dark text-white font-bold py-3 px-6 rounded-lg mt-3 hover:bg-greeb-500 transition ease-in-out duration-300"
+                  disabled={isSending}
                 >
-                  Send
+                  {isSending ? "Sending..." : "Send"}
                 </button>
               </form>
+              {showToast && (
+                <Toast
+                  message={toastMessage}
+                  type={toastType}
+                  onClose={() => setShowToast(false)}
+                />
+              )}
             </div>
           </div>
         </div>
