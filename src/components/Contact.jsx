@@ -19,13 +19,11 @@ const Contact = () => {
       setShowToast(false);
     }, 5000);
   };
+
   const handleSendMessage = (e) => {
     e.preventDefault();
     setIsSending(true);
-    setTimeout(() => {
-      setIsSending(false);
-      sendEmail();
-    }, 2000);
+    sendEmail();
   };
   // sending email through EMailJS
   const form = useRef();
@@ -35,14 +33,17 @@ const Contact = () => {
     const username = form.current.user_name.value;
     const email = form.current.email.value;
     const message = form.current.message.value;
-
+    const DELAY_DURATION = 1500;
     // Validate input
     if (!username || !email || !message) {
       console.log("Please fill in all fields before sending the email.");
-      showToastMessage(
-        "Please fill in all fields before sending the email.",
-        "failed"
-      );
+      setTimeout(() => {
+        setIsSending(false);
+        showToastMessage(
+          "Please fill in all fields before sending the email.",
+          "failed"
+        );
+      }, DELAY_DURATION);
 
       return;
     }
@@ -57,8 +58,11 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
-          showToastMessage("Your Message successfully sent!", "sucess");
-          document.getElementById("contactForm").reset();
+          setTimeout(() => {
+            setIsSending(false);
+            showToastMessage("Your Message successfully sent!", "success");
+            document.getElementById("contactForm").reset();
+          }, DELAY_DURATION);
         },
         (error) => {
           console.log(error.text);
@@ -66,6 +70,7 @@ const Contact = () => {
             "There's an system error please try again later!",
             "failed"
           );
+          setIsSending(false);
         }
       );
   };
