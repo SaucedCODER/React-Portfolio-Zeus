@@ -1,6 +1,29 @@
-import React from "react";
-
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_gmrgyjd",
+        "template_6bigrho",
+        form.current,
+        "7OQA-hhYHAncYGexL"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("sended");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
     <div
       name="contact"
@@ -97,14 +120,18 @@ const Contact = () => {
               </div>
 
               {/* Form */}
-              <form className="p-6 flex flex-col justify-center">
+              <form
+                className="p-6 flex flex-col justify-center"
+                ref={form}
+                onSubmit={sendEmail}
+              >
                 <div className="flex flex-col">
                   <label htmlFor="name" className="hidden">
                     Full Name
                   </label>
                   <input
                     type="name"
-                    name="name"
+                    name="user_name"
                     id="name"
                     placeholder="Full Name"
                     className="link w-100 mt-2 py-3 px-3 rounded-lg bg-white dark:bg-gray-800 border border-gray-400 dark:border-gray-700 text-gray-300 font-semibold focus:border-green-500 focus:outline-none"
