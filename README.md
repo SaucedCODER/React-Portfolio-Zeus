@@ -1,4 +1,8 @@
-# My Portfolio (React + Vite / TailwindCSS) - minimalist design
+# MY Portfolio (React + Vite / TailwindCSS) - minimalist design 
+
+🚧 Welcome to my evolving portfolio! I'm actively working on adding more projects and details. Explore what's available, and stay tuned for updates.
+
+**[Visit Portfolio](https://saucedcoder.github.io/React-Portfolio-Zeus/)**
 
 This is a simple React + Vite portfolio template with a minimalist design.
 
