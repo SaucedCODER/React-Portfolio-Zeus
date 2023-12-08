@@ -30,9 +30,9 @@ export const data = [
     ["Javascript", <FaJs size={35} />, ""],
     ["ReactJs", <FaReact size={35} />, "hide to-bottom"],
   ],
-  [
-    ["Git", <FaGitAlt size={35} />, "hide to-top"],
-    ["HTML", <FaHtml5 size={35} />, ""],
-    ["Django", <SiDjango size={35} />, "hide to-bottom"],
-  ],
+  // [
+  //   ["Git", <FaGitAlt size={35} />, "hide to-top"],
+  //   ["HTML", <FaHtml5 size={35} />, ""],
+  //   ["Django", <SiDjango size={35} />, "hide to-bottom"],
+  // ],
 ];
